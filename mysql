@@ -1,5 +1,0 @@
-FROM mysql:latest
-WORKDIR /app
-ENV MYSQL_ROOT_PASSWORD=rootuser
-COPY init.sql
-EXPOSE 3306
