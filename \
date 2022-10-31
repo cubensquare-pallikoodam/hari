@@ -1,7 +1,0 @@
-FROM python:3.8-alpine
-WORKDIR /app
-COPY requirement.txt .
-RUN pip3 install -r requirement.txt
-COPY . /app
-ENTRYPOINT [ "python" ]
-CMD ["app.py" ]
