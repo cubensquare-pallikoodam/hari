@@ -1,22 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: flask-app
+  name: hari-flask-app
+  namespace: batch2
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: flask-app
+      app: hari-flask-app
   template:
     metadata:
       labels:
-        app: flask-app
+        app: hari-flask-app
 
 
     spec:
       containers:
         - name: flask-app-container
-          image: harirharan95/mydockerrepo:pythonimagenew1 
+          image: 915551958967.dkr.ecr.ap-south-1.amazonaws.com/flask_container:hariflask 
           imagePullPolicy: Always
           ports:
             - containerPort: 5000
